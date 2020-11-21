@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+    <slide
+        android:duration="1000"
+        android:interpolator="@android:interpolator/fast_out_slow_in"
+        android:slideEdge="top">
+        <targets>
+            <!--指定要执行动画的布局id,如果不指定则默认为根布局下的所有子布局-->
+            <target android:targetId="@+id/top_image"/>
+            <!--指定不需要执行动画的布局id，这里排除状态栏和导航栏-->
+            <target android:excludeId="@android:id/statusBarBackground"/>
+            <target android:excludeId="@android:id/navigationBarBackground"/>
+        </targets>
+    </slide>
+    <slide
+        android:duration="1000"
+        android:interpolator="@android:interpolator/fast_out_slow_in"
+        android:slideEdge="bottom">
+        <targets>
+            <target android:targetId="@+id/bottom_content"/>
+        </targets>
+    </slide>
+</transitionSet>
